@@ -28,10 +28,10 @@
       "value": 150
     },
     "azskBudgetStartDate": {
-      "value": "2022-12-01"
+      "value": "2024-07-01"
     },
     "azskBudgetEndDate": {
-      "value": "2025-12-01"
+      "value": "2028-12-01"
     },
     "azskBudgetFirstThreshold": {
       "value": 80
