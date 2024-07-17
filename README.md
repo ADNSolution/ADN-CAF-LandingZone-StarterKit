@@ -92,7 +92,7 @@ Um dieses Starter Kit für ein neues oder bereits bestehendes Abonnement einzuse
     $subscriptionID = "your subscription ID"
     ``` 
 
-    Einrichten des Kontos für die Verwendung der Verdächtigung
+    Einrichten des Kontos für die Verwendung der Subscription
 
     ```azurecli
     az account set --subscription $subscriptionID
@@ -124,16 +124,3 @@ Um dieses Starter Kit für ein neues oder bereits bestehendes Abonnement einzuse
 
     ```
   
-## Beitragender
-
-Dieses Projekt begrüßt Beiträge und Vorschläge.  Die meisten Beiträge erfordern die Zustimmung zu einer
-Contributor License Agreement (CLA) zustimmen, in dem Sie erklären, dass Sie das Recht haben, uns die Rechte zur Nutzung Ihres Beitrags einzuräumen, und dies auch tatsächlich tun.
-die Rechte zur Nutzung Ihres Beitrags einräumen. Einzelheiten finden Sie unter <https://cla.microsoft.com.>.
-
-Wenn Sie einen Pull Request einreichen, wird ein CLA-Bot automatisch feststellen, ob Sie eine CLA vorlegen müssen
-eine CLA angeben müssen und schmückt den PR entsprechend aus (z.B. Label, Kommentar). Befolgen Sie einfach die Anweisungen
-des Bots. Sie müssen dies nur einmal für alle Repos tun, die unser CLA verwenden.
-
-Dieses Projekt hat den [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) angenommen.
-Weitere Informationen finden Sie in den [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) oder
-kontaktieren Sie [opencode@microsoft.com](mailto:opencode@microsoft.com) mit zusätzlichen Fragen oder Kommentaren.
