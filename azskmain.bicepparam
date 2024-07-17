@@ -29,7 +29,7 @@ param azskBudgetAmount = 100
 param azskBudgetStartDate = '2024-07-01'
 
 // Set the budget end date in format YYYY-MM-DD must be in future 
-param azskBudgetEndDate = '2026-12-01'
+param azskBudgetEndDate = '2028-12-01'
 
 // Define budget alert first threshold
 param azskBudgetFirstThreshold = 80
