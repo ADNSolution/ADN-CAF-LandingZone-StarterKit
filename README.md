@@ -68,7 +68,7 @@ Wir richten einige grundlegende Azure-Richtlinien ein. Dies ist die Liste der Ri
 
 Alle Richtlinien werden in einer Initiative gesammelt und diese wird dem Abonnement im Rahmen der Bereitstellung zugewiesen. Dies bietet die Möglichkeit, auf einen Blick zu überprüfen, wie gut die Azure-Ressourcen mit diesen Richtlinien übereinstimmen.
 
-![Ansicht zur Einhaltung von Azure-Richtlinien](/Media/AuditReport.png)
+![Ansicht zur Einhaltung von Azure-Richtlinien](/media/AuditReport.png)
 
 ## Wie wird das Paket ausgerollt?
 
