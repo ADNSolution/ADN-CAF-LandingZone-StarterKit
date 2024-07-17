@@ -6,7 +6,7 @@ Es gibt viele Abonnements in Azure, bei denen eine grundlegende Governance fehlt
 
 Wenn Sie nicht mit der auf dem CAF basierenden Lannding-Zone beginnen, wird Ihnen dieses Repository dabei helfen, einige Grundlagen zu schaffen, um ein Minimum an Governance einzurichten. 
 
-### Cloud governance disciplins
+### Cloud governance Disziplinen 
 
 Fünf Disziplinen der Cloud-Governance: 
 
@@ -24,12 +24,12 @@ Dieses Starterkit hilft bei der Einrichtung der Grundlagen für Kostenmanagement
 
 Die Mindestmaßnahme, die im Rahmen eines Abonnements in Azure zu ergreifen ist, besteht darin, dass in Azure Cost Management zwei grundlegende Warnungen eingerichtet werden sollten. Einer dient der Erkennung eines festgelegten Budgets und der andere der Erkennung von Anomalien im Verbrauch.
 
-##### Einrichten der Haushaltswarnung
+##### Einrichten der Budget-Warnung
 
-Dieses Repository bietet ein Modul zur Bereitstellung der Haushaltswarnung. Die Parameter für diesen Alarm werden alle in der Datei azskmain.parameters.json im Stammverzeichnis des Repositorys festgelegt. Die folgenden Parameter müssen gesetzt werden:
+Dieses Repository bietet ein Modul zur Bereitstellung der Budget-Warnung. Die Parameter für diesen Alarm werden alle in der Datei azskmain.parameters.json im Stammverzeichnis des Repositorys festgelegt. Die folgenden Parameter müssen gesetzt werden:
 
 
-|Parameter|Descitpion|Default Value|
+|Parameter|Beschreibung|Standardwert|
 |---|---|---|
 |azskBudgetname|Der benutzerfreundliche Name der Budget-Warnung|'Azure StarterKit Budget'|
 |azskBudgetAmount|Der Budgetwert, gegen den getestet werden soll. Sie legen den Geldbetrag fest, auf den der Alarm reagieren soll. Wenn Sie den Wert auf 150 setzen, wird der Alarm ausgelöst, sobald die Ausgaben den prozentualen Anteil des primären und sekundären Schwellenwerts erreichen.
@@ -47,60 +47,60 @@ Im Azure Cost Management gibt es die Möglichkeit, einen Anomaliealarm einzurich
 
 Wir richten einige grundlegende Azure-Richtlinien ein. Dies ist die Liste der Richtlinien, die dem Abonnement zugewiesen werden. Die folgenden Tabellen zeigen die Gruppen und die zugewiesenen Richtlinien.
 
-##### Identiy and Accessmanagement
+##### Identitäts- und Zugangsmanagement
 |Policy|Descitpion|Referenz|
 |---|---|---|
-|Subscription should have a contact Email address for security issues|To ensure the relevant people in your organization are notified when there is a potential security breach in one of your subscriptions, set a security contact to receive email notifications from Security Center.|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_Security_contact_email.json)|
-|A maximum of 3 owners should be designated for your subscription|It is recommended to designate up to 3 subscription owners in order to reduce the potential for breach by a compromised owner|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_DesignateLessThanXOwners_Audit.json)|
+|Um sicherzustellen, dass die zuständigen Personen in Ihrem Unternehmen benachrichtigt werden, wenn eine potenzielle Sicherheitsverletzung in einem Ihrer Abonnements auftritt, legen Sie einen Sicherheitskontakt fest, der E-Mail-Benachrichtigungen vom Sicherheitscenter erhält.|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_Security_contact_email.json)|
+|Für Ihr Abonnement sollten maximal 3 Eigentümer bestimmt werden. Es wird empfohlen, bis zu 3 Eigentümer für Ihr Abonnement zu bestimmen, um das Potenzial für einen Verstoß durch einen gefährdeten Eigentümer zu verringern.|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_DesignateLessThanXOwners_Audit.json)|
 
-##### Network
+##### Netzwerk
 |Policy|Descitpion|Referenz|
 |---|---|---|
-|All network ports should be restricted on network security groups associated with your VMs|All network ports should be restricted on network security groups associated to your virtual machine|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_UnprotectedEndpoints_Audit.json)|
-|nternetfacing VMs should be protected with NSGs'|Protect your virtual machines from potential threats by restricting access to them with network security groups (NSG). Learn more about controlling traffic with NSGs at [https://aka.ms/nsg-doc](https://aka.ms/nsg-doc)|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_NetworkSecurityGroupsOnInternetFacingVirtualMachines_Audit.json)|
-|Subnets should be associated with a Network Security Group|Protect your subnet from potential threats by restricting access to it with a Network Security Group (NSG). NSGs contain a list of Access Control List (ACL) rules that allow or deny network traffic to your subnet.|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_NetworkSecurityGroupsOnSubnets_Audit.json)|
-|Network Watcher should be enabled|Network Watcher is a regional service that enables you to monitor and diagnose conditions at a network scenario level in, to, and from Azure. Scenario level monitoring enables you to diagnose problems at an end to end network level view. It is required to have a network watcher resource group to be created in every region where a virtual network is present. An alert is enabled if a network watcher resource group is not available in a particular region.|[Defintion](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Network/NetworkWatcher_Enabled_Audit.json)|
+|Alle Netzwerk-Ports sollten auf Netzwerksicherheitsgruppen beschränkt werden, die mit Ihren VMs verknüpft sind|Alle Netzwerk-Ports sollten auf Netzwerksicherheitsgruppen beschränkt werden, die mit Ihrer virtuellen Maschine verknüpft sind|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_UnprotectedEndpoints_Audit.json)|
+|nternetfacing VMs sollten mit NSGs geschützt werden'|Schützen Sie Ihre virtuellen Maschinen vor potenziellen Bedrohungen, indem Sie den Zugriff auf sie mit Netzwerksicherheitsgruppen (NSGs) beschränken. Erfahren Sie mehr über die Kontrolle des Datenverkehrs mit NSGs unter [https://aka.ms/nsg-doc](https://aka.ms/nsg-doc)|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_NetworkSecurityGroupsOnInternetFacingVirtualMachines_Audit.json)|
+|Subnetze sollten mit einer Netzwerksicherheitsgruppe verbunden werden. Schützen Sie Ihr Subnetz vor potenziellen Bedrohungen, indem Sie den Zugriff darauf mit einer Netzwerksicherheitsgruppe (NSG) einschränken. NSGs enthalten eine Liste von ACL-Regeln (Access Control List), die den Netzwerkverkehr zu Ihrem Subnetz erlauben oder verweigern.|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_NetworkSecurityGroupsOnSubnets_Audit.json)|
+|Network Watcher sollte aktiviert sein. Network Watcher ist ein regionaler Dienst, der es Ihnen ermöglicht, Bedingungen auf der Ebene eines Netzwerkszenarios in, zu und von Azure zu überwachen und zu diagnostizieren. Die Überwachung auf Szenarioebene ermöglicht Ihnen die Diagnose von Problemen auf einer End-to-End-Ansicht auf Netzwerkebene. In jeder Region, in der ein virtuelles Netzwerk vorhanden ist, muss eine Netzwerküberwachungsressourcengruppe erstellt werden. Wenn in einer bestimmten Region keine Netzwerküberwachungs-Ressourcengruppe verfügbar ist, wird eine Warnung aktiviert.|[Defintion](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Network/NetworkWatcher_Enabled_Audit.json)|
 
-##### Security
+##### Sicherheit
 |Policy|Descitpion|Referenz|
 |---|---|---|
-|System updates should be installed on your machines|Missing security system updates on your servers will be monitored by Azure Security Center as recommendations|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_MissingSystemUpdates_Audit.json)|
+|System-Updates sollten auf Ihren Rechnern installiert werden. Fehlende Sicherheitssystem-Updates auf Ihren Servern werden vom Azure Security Center als Empfehlungen überwacht.|[Definition](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Azure%20Government/Security%20Center/ASC_MissingSystemUpdates_Audit.json)|
 
-All policies will be collection into a initiative and this will be assigned to the subscription in scope of the deployment. This gives the option to check how good the Azure resources are compliant to these policies in one view.
+Alle Richtlinien werden in einer Initiative gesammelt und diese wird dem Abonnement im Rahmen der Bereitstellung zugewiesen. Dies bietet die Möglichkeit, auf einen Blick zu überprüfen, wie gut die Azure-Ressourcen mit diesen Richtlinien übereinstimmen.
 
-![Azure Policy compliance view](/media/AuditReport.png)
+![Ansicht zur Einhaltung von Azure-Richtlinien](/media/AuditReport.png)
 
-## How to deploy
+## Wie wird das Paket ausgerollt?
 
-To deploy this Starter Kit to a new or already existing subscription just follow these steps:
+Um dieses Starter Kit für ein neues oder bereits bestehendes Abonnement einzusetzen, führen Sie einfach die folgenden Schritte aus:
 
-1. Ensure to be loged into Azure
+1. Sicherstellen, dass Sie bei Azure angemeldet sind
 
     ```azurecli
     az login
     ```
 
-2. Select the right Subscrition
+2. Auswählen der richtigen Subscrition
 
     ```azurecli
     az account show --output table
     ```
 
-    Check the output for the subscription which should be used and run the following comamnd to set your specific ID
+    Prüfen Sie in der Ausgabe, welches Abonnement verwendet werden soll, und führen Sie den folgenden Befehl aus, um Ihre spezifische ID festzulegen
 
     ```azurecli
     $subscriptionID = "your subscription ID"
     ``` 
 
-    Set the account to use the susbcription
+    Einrichten des Kontos für die Verwendung der Verdächtigung
 
     ```azurecli
     az account set --subscription $subscriptionID
     ```
 
-3. In the next step you can choose between to option:
+3. Im nächsten Schritt können Sie zwischen zwei Optionen wählen:
 
-- Create a new deployment at Suscription level with the classic **.json parameter file** to deploy the Starter Kit
+- Erstellen Sie eine neue Bereitstellung auf der Abonnementebene mit der klassischen **.json-Parameterdatei**, um das Starter Kit bereitzustellen
 
     ```azurecli
     $location = "your preferred location"
@@ -109,13 +109,13 @@ To deploy this Starter Kit to a new or already existing subscription just follow
     
     ```
 
-- Create a new deployment at Suscription level with the new **.bicepparam parameter file** to deploy the Starter Kit
+- Erstellen Sie eine neue Bereitstellung auf der Abonnementebene mit der neuen **.bicepparam-Parameterdatei**, um das Starterkit bereitzustellen
 
-    To do this, you need to create a new bicep file with the name azskmain.bicepparam to define the parameters for the deployment. To use this kind of files you need to have the following versions on your system:
+    Zu diesem Zweck müssen Sie eine neue Bicep-Datei mit dem Namen azskmain.bicepparam erstellen, um die Parameter für die Bereitstellung zu definieren. Um diese Art von Dateien zu verwenden, müssen Sie die folgenden Versionen auf Ihrem System haben:
 
-  - Azure CLI 2.48.1 or later (check with az --version)
-  - Bicep version 0.16.2 or later (chekc with az bicep --version)
-  - and you have to configure your bicepconfig.json (see repo for an example)
+  - Azure CLI 2.48.1 oder später (check with az --version)
+  - Bicep version 0.16.2 oder später (chekc with az bicep --version)
+  - und Sie müssen Ihre bicepconfig.json konfigurieren (siehe Repo für ein Beispiel)
 
     ```azurecli
     $location = "your preferred location"
@@ -124,16 +124,16 @@ To deploy this Starter Kit to a new or already existing subscription just follow
 
     ```
   
-## Contributing
+## Beitragender
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit <https://cla.microsoft.com.>
+Dieses Projekt begrüßt Beiträge und Vorschläge.  Die meisten Beiträge erfordern die Zustimmung zu einer
+Contributor License Agreement (CLA) zustimmen, in dem Sie erklären, dass Sie das Recht haben, uns die Rechte zur Nutzung Ihres Beitrags einzuräumen, und dies auch tatsächlich tun.
+die Rechte zur Nutzung Ihres Beitrags einräumen. Einzelheiten finden Sie unter <https://cla.microsoft.com.>.
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+Wenn Sie einen Pull Request einreichen, wird ein CLA-Bot automatisch feststellen, ob Sie eine CLA vorlegen müssen
+eine CLA angeben müssen und schmückt den PR entsprechend aus (z.B. Label, Kommentar). Befolgen Sie einfach die Anweisungen
+des Bots. Sie müssen dies nur einmal für alle Repos tun, die unser CLA verwenden.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Dieses Projekt hat den [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) angenommen.
+Weitere Informationen finden Sie in den [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) oder
+kontaktieren Sie [opencode@microsoft.com](mailto:opencode@microsoft.com) mit zusätzlichen Fragen oder Kommentaren.
