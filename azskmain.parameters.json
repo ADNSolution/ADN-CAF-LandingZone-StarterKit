@@ -53,6 +53,18 @@
     },
      "azskAnomalyAlertEmailSubject": {
       "value": "Azure Starter Kit Anomaly Alert detected"
+    },
+    "logAnalyticsWorkspaceName": {
+      "value": "myLogAnalyticsWorkspace"
+    },
+    "diagnosticSettingsName": {
+      "value": "myDiagnosticSettings"
+    },
+    "policyAssignmentName": {
+      "value": "landingZonePolicyAssignment"
+    },
+    "policySetDefinitionName": {
+      "value": "landingZonePolicySet"
     }
   }
 }
